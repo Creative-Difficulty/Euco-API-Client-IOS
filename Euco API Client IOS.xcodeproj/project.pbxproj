@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		692A3A822883349F007CE0CB /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A812883349F007CE0CB /* Tests_iOS.swift */; };
+		692A3A842883349F007CE0CB /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A832883349F007CE0CB /* Tests_iOSLaunchTests.swift */; };
+		692A3A8E2883349F007CE0CB /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A8D2883349F007CE0CB /* Tests_macOS.swift */; };
+		692A3A902883349F007CE0CB /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A8F2883349F007CE0CB /* Tests_macOSLaunchTests.swift */; };
+		692A3A912883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A692883349A007CE0CB /* Euco_API_Client_IOSApp.swift */; };
+		692A3A922883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A692883349A007CE0CB /* Euco_API_Client_IOSApp.swift */; };
+		692A3A932883349F007CE0CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A6A2883349A007CE0CB /* ContentView.swift */; };
+		692A3A942883349F007CE0CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A6A2883349A007CE0CB /* ContentView.swift */; };
+		692A3A952883349F007CE0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692A3A6B2883349F007CE0CB /* Assets.xcassets */; };
+		692A3A962883349F007CE0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692A3A6B2883349F007CE0CB /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		692A3A7E2883349F007CE0CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 692A3A6428833499007CE0CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 692A3A6F2883349F007CE0CB;
+			remoteInfo = "Euco API Client IOS (iOS)";
+		};
+		692A3A8A2883349F007CE0CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 692A3A6428833499007CE0CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 692A3A752883349F007CE0CB;
+			remoteInfo = "Euco API Client IOS (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		692A3A692883349A007CE0CB /* Euco_API_Client_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euco_API_Client_IOSApp.swift; sourceTree = "<group>"; };
+		692A3A6A2883349A007CE0CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		692A3A6B2883349F007CE0CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		692A3A702883349F007CE0CB /* Euco API Client IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Euco API Client IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		692A3A762883349F007CE0CB /* Euco API Client IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Euco API Client IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		692A3A782883349F007CE0CB /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		692A3A7D2883349F007CE0CB /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		692A3A812883349F007CE0CB /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		692A3A832883349F007CE0CB /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		692A3A892883349F007CE0CB /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		692A3A8D2883349F007CE0CB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		692A3A8F2883349F007CE0CB /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		692A3A6D2883349F007CE0CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A732883349F007CE0CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A7A2883349F007CE0CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A862883349F007CE0CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		692A3A6328833499007CE0CB = {
+			isa = PBXGroup;
+			children = (
+				692A3A682883349A007CE0CB /* Shared */,
+				692A3A772883349F007CE0CB /* macOS */,
+				692A3A802883349F007CE0CB /* Tests iOS */,
+				692A3A8C2883349F007CE0CB /* Tests macOS */,
+				692A3A712883349F007CE0CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		692A3A682883349A007CE0CB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				692A3A692883349A007CE0CB /* Euco_API_Client_IOSApp.swift */,
+				692A3A6A2883349A007CE0CB /* ContentView.swift */,
+				692A3A6B2883349F007CE0CB /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		692A3A712883349F007CE0CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				692A3A702883349F007CE0CB /* Euco API Client IOS.app */,
+				692A3A762883349F007CE0CB /* Euco API Client IOS.app */,
+				692A3A7D2883349F007CE0CB /* Tests iOS.xctest */,
+				692A3A892883349F007CE0CB /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		692A3A772883349F007CE0CB /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				692A3A782883349F007CE0CB /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		692A3A802883349F007CE0CB /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				692A3A812883349F007CE0CB /* Tests_iOS.swift */,
+				692A3A832883349F007CE0CB /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		692A3A8C2883349F007CE0CB /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				692A3A8D2883349F007CE0CB /* Tests_macOS.swift */,
+				692A3A8F2883349F007CE0CB /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		692A3A6F2883349F007CE0CB /* Euco API Client IOS (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 692A3A992883349F007CE0CB /* Build configuration list for PBXNativeTarget "Euco API Client IOS (iOS)" */;
+			buildPhases = (
+				692A3A6C2883349F007CE0CB /* Sources */,
+				692A3A6D2883349F007CE0CB /* Frameworks */,
+				692A3A6E2883349F007CE0CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Euco API Client IOS (iOS)";
+			productName = "Euco API Client IOS (iOS)";
+			productReference = 692A3A702883349F007CE0CB /* Euco API Client IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		692A3A752883349F007CE0CB /* Euco API Client IOS (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 692A3A9C2883349F007CE0CB /* Build configuration list for PBXNativeTarget "Euco API Client IOS (macOS)" */;
+			buildPhases = (
+				692A3A722883349F007CE0CB /* Sources */,
+				692A3A732883349F007CE0CB /* Frameworks */,
+				692A3A742883349F007CE0CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Euco API Client IOS (macOS)";
+			productName = "Euco API Client IOS (macOS)";
+			productReference = 692A3A762883349F007CE0CB /* Euco API Client IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		692A3A7C2883349F007CE0CB /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 692A3A9F2883349F007CE0CB /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				692A3A792883349F007CE0CB /* Sources */,
+				692A3A7A2883349F007CE0CB /* Frameworks */,
+				692A3A7B2883349F007CE0CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				692A3A7F2883349F007CE0CB /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 692A3A7D2883349F007CE0CB /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		692A3A882883349F007CE0CB /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 692A3AA22883349F007CE0CB /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				692A3A852883349F007CE0CB /* Sources */,
+				692A3A862883349F007CE0CB /* Frameworks */,
+				692A3A872883349F007CE0CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				692A3A8B2883349F007CE0CB /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 692A3A892883349F007CE0CB /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		692A3A6428833499007CE0CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					692A3A6F2883349F007CE0CB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					692A3A752883349F007CE0CB = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					692A3A7C2883349F007CE0CB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 692A3A6F2883349F007CE0CB;
+					};
+					692A3A882883349F007CE0CB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 692A3A752883349F007CE0CB;
+					};
+				};
+			};
+			buildConfigurationList = 692A3A6728833499007CE0CB /* Build configuration list for PBXProject "Euco API Client IOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 692A3A6328833499007CE0CB;
+			productRefGroup = 692A3A712883349F007CE0CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				692A3A6F2883349F007CE0CB /* Euco API Client IOS (iOS) */,
+				692A3A752883349F007CE0CB /* Euco API Client IOS (macOS) */,
+				692A3A7C2883349F007CE0CB /* Tests iOS */,
+				692A3A882883349F007CE0CB /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		692A3A6E2883349F007CE0CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692A3A952883349F007CE0CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A742883349F007CE0CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692A3A962883349F007CE0CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A7B2883349F007CE0CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A872883349F007CE0CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		692A3A6C2883349F007CE0CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692A3A932883349F007CE0CB /* ContentView.swift in Sources */,
+				692A3A912883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A722883349F007CE0CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692A3A942883349F007CE0CB /* ContentView.swift in Sources */,
+				692A3A922883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A792883349F007CE0CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692A3A842883349F007CE0CB /* Tests_iOSLaunchTests.swift in Sources */,
+				692A3A822883349F007CE0CB /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692A3A852883349F007CE0CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				692A3A902883349F007CE0CB /* Tests_macOSLaunchTests.swift in Sources */,
+				692A3A8E2883349F007CE0CB /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		692A3A7F2883349F007CE0CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 692A3A6F2883349F007CE0CB /* Euco API Client IOS (iOS) */;
+			targetProxy = 692A3A7E2883349F007CE0CB /* PBXContainerItemProxy */;
+		};
+		692A3A8B2883349F007CE0CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 692A3A752883349F007CE0CB /* Euco API Client IOS (macOS) */;
+			targetProxy = 692A3A8A2883349F007CE0CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		692A3A972883349F007CE0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		692A3A982883349F007CE0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		692A3A9A2883349F007CE0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Euco-API-Client-IOS";
+				PRODUCT_NAME = "Euco API Client IOS";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		692A3A9B2883349F007CE0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Euco-API-Client-IOS";
+				PRODUCT_NAME = "Euco API Client IOS";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		692A3A9D2883349F007CE0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Euco-API-Client-IOS";
+				PRODUCT_NAME = "Euco API Client IOS";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		692A3A9E2883349F007CE0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Euco-API-Client-IOS";
+				PRODUCT_NAME = "Euco API Client IOS";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		692A3AA02883349F007CE0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Euco API Client IOS (iOS)";
+			};
+			name = Debug;
+		};
+		692A3AA12883349F007CE0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Euco API Client IOS (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		692A3AA32883349F007CE0CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Euco API Client IOS (macOS)";
+			};
+			name = Debug;
+		};
+		692A3AA42883349F007CE0CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.CreativeDifficulty.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Euco API Client IOS (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		692A3A6728833499007CE0CB /* Build configuration list for PBXProject "Euco API Client IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				692A3A972883349F007CE0CB /* Debug */,
+				692A3A982883349F007CE0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		692A3A992883349F007CE0CB /* Build configuration list for PBXNativeTarget "Euco API Client IOS (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				692A3A9A2883349F007CE0CB /* Debug */,
+				692A3A9B2883349F007CE0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		692A3A9C2883349F007CE0CB /* Build configuration list for PBXNativeTarget "Euco API Client IOS (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				692A3A9D2883349F007CE0CB /* Debug */,
+				692A3A9E2883349F007CE0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		692A3A9F2883349F007CE0CB /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				692A3AA02883349F007CE0CB /* Debug */,
+				692A3AA12883349F007CE0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		692A3AA22883349F007CE0CB /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				692A3AA32883349F007CE0CB /* Debug */,
+				692A3AA42883349F007CE0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 692A3A6428833499007CE0CB /* Project object */;
+}
