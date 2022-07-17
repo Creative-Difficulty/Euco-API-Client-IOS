@@ -11,7 +11,7 @@ import SwiftUI
 struct Euco_API_Client_IOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

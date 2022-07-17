@@ -61,22 +61,38 @@ struct LoginView: View {
             }
         }.navigationBarHidden(true)
     }
+    
     func authenticateUser(username: String, password: String) {
-            if username.lowercased() == "hello" && password.lowercased() == "hello" {
-                wrongUsername = 0
-                wrongPassword = 0
-                loginCompleted = true
-            } else {
-                if username.lowercased() == "hello" {
-                    wrongPassword = 2
-                } else if password.lowercased() == "hello" {
-                    wrongUsername = 2
-                } else {
-                    wrongPassword = 2
-                    wrongUsername = 2
+//            if username.lowercased() == "hello" && password.lowercased() == "hello" {
+//                wrongUsername = 0
+//                wrongPassword = 0
+//                loginCompleted = true
+//            } else {
+//                if username.lowercased() == "hello" {
+//                    wrongPassword = 2
+//                } else if password.lowercased() == "hello" {
+//                    wrongUsername = 2
+//                } else {
+//                    wrongPassword = 2
+//                    wrongUsername = 2
+//                }
+//            }
+        
+            
+        let url = URL(string: username)
+        var request = URLRequest(url: url!)
+        request.setValue(password, forHTTPHeaderField: "authentication")
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                if let base64Data = String(data: data, encoding: .utf8) {
+                    let decodedData = Data(base64Encoded: base64Data)!
+                    let decodedString = String(data: decodedData, encoding: .utf8)!
+                    print(decodedString)
                 }
             }
-        }
+            
+        }.resume()
+    }
 }
 
 struct LoginView_Previews: PreviewProvider {
