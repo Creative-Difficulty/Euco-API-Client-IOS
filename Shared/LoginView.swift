@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct LoginView: View {
+    //@ObservedObject var monitor = NetworkMonitor()
+    @ObservedObject var monitor = NetworkMonitor()
+    @State private var showAlertSheet = false
     @State private var EucoAPIURL = ""
     @State private var EucoAPIToken = ""
-    @State private var wrongUsername = 0
-    @State private var wrongPassword = 0
+    @State private var wrongURL = 0
+    @State private var wrongToken = 0
     @State private var loginCompleted = false
+    
+    
     
     var body: some View {
         NavigationView {
@@ -37,14 +42,14 @@ struct LoginView: View {
                         .frame(width:300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongUsername))
+                        .border(.red, width: CGFloat(wrongURL))
                     
                     SecureField("EucoAPI Token", text: $EucoAPIToken)
                         .padding()
                         .frame(width:300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongPassword))
+                        .border(.red, width: CGFloat(wrongToken))
                     
                     Button("Authenticate") {
                         authenticateUser(username: EucoAPIURL, password: EucoAPIToken)
@@ -54,12 +59,12 @@ struct LoginView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
                     
-                    NavigationLink(destination: Text("logged in!"), isActive: $loginCompleted) {
-                        EmptyView()
-                    }
                 }
             }
         }.navigationBarHidden(true)
+        if !monitor.isConnected {
+            OfflineView()
+        }
     }
     
     func authenticateUser(username: String, password: String) {
@@ -87,7 +92,9 @@ struct LoginView: View {
                 if let base64Data = String(data: data, encoding: .utf8) {
                     let decodedData = Data(base64Encoded: base64Data)!
                     let decodedString = String(data: decodedData, encoding: .utf8)!
+                    @State var navigate = true
                     print(decodedString)
+                    NavigationLink("AddCreditCardView", destination: ContentView(), isActive: $navigate)
                 }
             }
             
