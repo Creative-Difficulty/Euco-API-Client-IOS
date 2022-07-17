@@ -17,6 +17,12 @@
 		692A3A942883349F007CE0CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3A6A2883349A007CE0CB /* ContentView.swift */; };
 		692A3A952883349F007CE0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692A3A6B2883349F007CE0CB /* Assets.xcassets */; };
 		692A3A962883349F007CE0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692A3A6B2883349F007CE0CB /* Assets.xcassets */; };
+		692A3AAC28834C63007CE0CB /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3AAB28834C63007CE0CB /* userViewModel.swift */; };
+		692A3AAD28834C63007CE0CB /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3AAB28834C63007CE0CB /* userViewModel.swift */; };
+		692A3AAF28834C8D007CE0CB /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3AAE28834C8D007CE0CB /* userModel.swift */; };
+		692A3AB028834C8D007CE0CB /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692A3AAE28834C8D007CE0CB /* userModel.swift */; };
+		6932AFC8288409FD006165E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932AFC7288409FD006165E8 /* LoginView.swift */; };
+		6932AFC9288409FD006165E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932AFC7288409FD006165E8 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,9 @@
 		692A3A892883349F007CE0CB /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692A3A8D2883349F007CE0CB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		692A3A8F2883349F007CE0CB /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		692A3AAB28834C63007CE0CB /* userViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
+		692A3AAE28834C8D007CE0CB /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		6932AFC7288409FD006165E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				692A3A692883349A007CE0CB /* Euco_API_Client_IOSApp.swift */,
+				692A3AAE28834C8D007CE0CB /* userModel.swift */,
+				692A3AAB28834C63007CE0CB /* userViewModel.swift */,
 				692A3A6A2883349A007CE0CB /* ContentView.swift */,
+				6932AFC7288409FD006165E8 /* LoginView.swift */,
 				692A3A6B2883349F007CE0CB /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -299,7 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692A3AAC28834C63007CE0CB /* userViewModel.swift in Sources */,
 				692A3A932883349F007CE0CB /* ContentView.swift in Sources */,
+				692A3AAF28834C8D007CE0CB /* userModel.swift in Sources */,
+				6932AFC8288409FD006165E8 /* LoginView.swift in Sources */,
 				692A3A912883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692A3AAD28834C63007CE0CB /* userViewModel.swift in Sources */,
 				692A3A942883349F007CE0CB /* ContentView.swift in Sources */,
+				692A3AB028834C8D007CE0CB /* userModel.swift in Sources */,
+				6932AFC9288409FD006165E8 /* LoginView.swift in Sources */,
 				692A3A922883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
