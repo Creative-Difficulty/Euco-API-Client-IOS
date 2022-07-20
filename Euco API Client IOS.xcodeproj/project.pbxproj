@@ -23,7 +23,6 @@
 		695DF62D28858B3200F09550 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF62A28858B3200F09550 /* userModel.swift */; };
 		695DF62E28858B3200F09550 /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF62B28858B3200F09550 /* userViewModel.swift */; };
 		695DF62F28858B3200F09550 /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF62B28858B3200F09550 /* userViewModel.swift */; };
-		69D19F512887F89400F2D795 /* otherRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D19F502887F89300F2D795 /* otherRequests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 		6932AFC7288409FD006165E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		695DF62A28858B3200F09550 /* userModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		695DF62B28858B3200F09550 /* userViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
-		69D19F502887F89300F2D795 /* otherRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherRequests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +157,6 @@
 		696720B92886B76C00A0641A /* JSONDecoding */ = {
 			isa = PBXGroup;
 			children = (
-				69D19F502887F89300F2D795 /* otherRequests.swift */,
 			);
 			path = JSONDecoding;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 				6932AFC8288409FD006165E8 /* LoginView.swift in Sources */,
 				695DF62C28858B3200F09550 /* userModel.swift in Sources */,
 				692A3A912883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
-				69D19F512887F89400F2D795 /* otherRequests.swift in Sources */,
 				695DF62E28858B3200F09550 /* userViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
