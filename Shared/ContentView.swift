@@ -7,25 +7,20 @@
 
 import SwiftUI
 struct ContentView: View {
-    
-    //@State var users: [User] = []
+    let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+    @State private var counter = 0
 
     var body: some View {
         List {
-            Text("Hi!")
+            Text("Hi")
         }.navigationTitle("Utility")
-//        List(users) { user in
-//
-//                Text(user.username)
-//                    .font(.headline)
-//                Text(user.name)
-//                    .font(.subheadline)
-//        }
-//            .onAppear {
-//                apiCall().getUsers { (users) in
-//                    self.users = users
-//                }
-//            }
+            .onReceive(timer) { time in
+                print("The time is now \(time)")
+                counter += 1
+//                    if counter == 5 {
+//                        timer.upstream.connect().cancel()
+//                    } else {
+            }
     }
 }
 

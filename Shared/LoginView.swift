@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 struct LoginView: View {
     @State private var EucoAPIURL = ""
@@ -14,6 +15,9 @@ struct LoginView: View {
     @State private var wrongToken = 0
     @State private var loginCompleted = false
     @State private var loggedIn = false
+    @State private var EucoAPIStatus = 0
+    @State private var EucoAPIStatusAlert = false
+    
     
     var body: some View {
     NavigationView {
@@ -58,15 +62,14 @@ struct LoginView: View {
                 .cornerRadius(10)
                 
             }
-        }
             NavigationLink(destination: ContentView(), isActive: $loggedIn) { EmptyView() }
+        }.alert("EucoAPI Server (\(EucoAPIURL)) returned Status code: \(EucoAPIStatus)", isPresented: $EucoAPIStatusAlert) {
+                    Button("OK", role: .cancel) { }
         }
     }
     .navigationBarHidden(true)
         
-//        if !monitor.isConnected {
-//            OfflineView()
-//        }
+    }
 }
 
 func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
@@ -86,8 +89,8 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
             wrongURL = 1
             return
         }
+        
         if let data = data {
-            wrongURL = 0
             if let base64Data = String(data: data, encoding: .utf8) {
                 if Data(base64Encoded: base64Data) == nil {
                     wrongToken = 1
@@ -95,25 +98,26 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
                 }
                 let decodedData = Data(base64Encoded: base64Data)!
                 let decodedString = String(data: decodedData, encoding: .utf8)!
-                let JSON: EucoAPIJSON = try! JSONDecoder().decode(EucoAPIJSON.self, from: Data(decodedString.utf8))
-                
-                if JSON.success == true {
+                let EucoAPIAuthdata = try? JSON(data: Data(decodedString.utf8))
+                print(EucoAPIAuthdata!["success"].bool!)
+                if EucoAPIAuthdata!["success"].bool! == true {
                     if let httpResponse = response as? HTTPURLResponse {
                         if httpResponse.statusCode == 200 {
-                            print(decodedString)
                             loggedIn = true
+                        } else {
+                            EucoAPIStatus = httpResponse.statusCode
+                            EucoAPIStatusAlert = true
                         }
                     }
+                } else {
+                    wrongToken = 1
                 }
             }
         }
         
     }.resume()
+    print(loggedIn)
 }
-}
-
-struct EucoAPIJSON: Decodable {
-    let success: Bool
 }
 
 struct LoginView_Previews: PreviewProvider {
