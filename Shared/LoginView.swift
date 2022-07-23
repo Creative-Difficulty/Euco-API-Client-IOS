@@ -9,14 +9,16 @@ import SwiftUI
 import SwiftyJSON
 
 struct LoginView: View {
-    @State private var EucoAPIURL = ""
-    @State private var EucoAPIToken = ""
+    @State var EucoAPIURL = ""
+    @State var EucoAPIToken = ""
     @State private var wrongURL = 0
     @State private var wrongToken = 0
     @State private var loginCompleted = false
     @State private var loggedIn = false
     @State private var EucoAPIStatus = 0
     @State private var EucoAPIStatusAlert = false
+    @State private var EucoAPIOnlineAlert = false
+    @State private var DeviceOnlineAlert = false
     
     
     var body: some View {
@@ -62,13 +64,15 @@ struct LoginView: View {
                 .cornerRadius(10)
                 
             }
-            NavigationLink(destination: ContentView(), isActive: $loggedIn) { EmptyView() }
+            NavigationLink(destination: ContentView(EucoAPIURL: $EucoAPIURL, EucoAPIToken: $EucoAPIToken), isActive: $loggedIn) { EmptyView() }
         }.alert("EucoAPI Server (\(EucoAPIURL)) returned Status code: \(EucoAPIStatus)", isPresented: $EucoAPIStatusAlert) {
                     Button("OK", role: .cancel) { }
         }
-    }
+    }.alert("EucoAPI Server (\(EucoAPIURL)) is not online", isPresented: $EucoAPIOnlineAlert) {
+        Button("OK", role: .cancel) { }
     .navigationBarHidden(true)
         
+    }
     }
 }
 
@@ -87,6 +91,7 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
     URLSession.shared.dataTask(with: request) { (data, response, error) in
         if error != nil {
             wrongURL = 1
+            EucoAPIOnlineAlert.toggle()
             return
         }
         
@@ -103,10 +108,10 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
                 if EucoAPIAuthdata!["success"].bool! == true {
                     if let httpResponse = response as? HTTPURLResponse {
                         if httpResponse.statusCode == 200 {
-                            loggedIn = true
+                            loggedIn.toggle()
                         } else {
                             EucoAPIStatus = httpResponse.statusCode
-                            EucoAPIStatusAlert = true
+                            EucoAPIStatusAlert.toggle()
                         }
                     }
                 } else {
@@ -116,9 +121,9 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
         }
         
     }.resume()
-    print(loggedIn)
 }
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
