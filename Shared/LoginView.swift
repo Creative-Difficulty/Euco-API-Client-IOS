@@ -7,19 +7,21 @@
 
 import SwiftUI
 import SwiftyJSON
+import Alamofire
 
 struct LoginView: View {
     @State var EucoAPIURL = ""
     @State var EucoAPIToken = ""
     @State private var wrongURL = 0
     @State private var wrongToken = 0
-    @State private var loginCompleted = false
     @State private var loggedIn = false
     @State private var EucoAPIStatus = 0
     @State private var EucoAPIStatusAlert = false
     @State private var EucoAPIOnlineAlert = false
     @State private var DeviceOnlineAlert = false
+    @State private var Offline = false
     
+    @State private var info: AlertInfo?
     
     var body: some View {
     NavigationView {
@@ -65,18 +67,21 @@ struct LoginView: View {
                 
             }
             NavigationLink(destination: ContentView(EucoAPIURL: $EucoAPIURL, EucoAPIToken: $EucoAPIToken), isActive: $loggedIn) { EmptyView() }
-        }.alert("EucoAPI Server (\(EucoAPIURL)) returned Status code: \(EucoAPIStatus)", isPresented: $EucoAPIStatusAlert) {
-                    Button("OK", role: .cancel) { }
-        }
-    }.alert("EucoAPI Server (\(EucoAPIURL)) is not online", isPresented: $EucoAPIOnlineAlert) {
-        Button("OK", role: .cancel) { }
-    .navigationBarHidden(true)
+            NavigationLink(destination: OfflineView(), isActive: $Offline) { EmptyView() }
+        }.alert(item: $info, content: { info in
+            Alert(title: Text(info.title))
+        })
         
-    }
+    }.navigationBarHidden(true)
     }
 }
 
 func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
+    if !NetworkReachabilityManager()!.isReachable {
+        Offline.toggle()
+        return
+    }
+    
     wrongToken = 0
     wrongURL = 0
     
@@ -91,7 +96,10 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
     URLSession.shared.dataTask(with: request) { (data, response, error) in
         if error != nil {
             wrongURL = 1
-            EucoAPIOnlineAlert.toggle()
+            info = AlertInfo(
+                id: .EucoAPIOnlineAlert,
+                title: "EucoAPI Server (\(EucoAPIURL)) is not online"
+            )
             return
         }
         
@@ -111,7 +119,10 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
                             loggedIn.toggle()
                         } else {
                             EucoAPIStatus = httpResponse.statusCode
-                            EucoAPIStatusAlert.toggle()
+                            info = AlertInfo(
+                                id: .EucoAPIStatusAlert,
+                                title: "EucoAPI Server \(EucoAPIURL) returned Status code: \(EucoAPIStatus)"
+                            )
                         }
                     }
                 } else {
@@ -122,6 +133,18 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
         
     }.resume()
 }
+}
+
+struct AlertInfo: Identifiable {
+    enum AlertType {
+        case EucoAPIOnlineAlert
+        case DeviceOnlineAlert
+        case EucoAPIStatusAlert
+
+    }
+    
+    let id: AlertType
+    let title: String
 }
 
 

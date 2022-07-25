@@ -19,6 +19,9 @@
 		692A3A962883349F007CE0CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692A3A6B2883349F007CE0CB /* Assets.xcassets */; };
 		6932AFC8288409FD006165E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932AFC7288409FD006165E8 /* LoginView.swift */; };
 		6932AFC9288409FD006165E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932AFC7288409FD006165E8 /* LoginView.swift */; };
+		69368C9D288D469A008BE809 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 69368C9C288D469A008BE809 /* Alamofire */; };
+		69482819288D4D3D00D607A1 /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69482818288D4D3D00D607A1 /* OfflineView.swift */; };
+		6948281A288D4D3D00D607A1 /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69482818288D4D3D00D607A1 /* OfflineView.swift */; };
 		695DF62E28858B3200F09550 /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF62B28858B3200F09550 /* userViewModel.swift */; };
 		695DF62F28858B3200F09550 /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DF62B28858B3200F09550 /* userViewModel.swift */; };
 		69C8FFC32888408D00F290C8 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 69C8FFC22888408D00F290C8 /* SwiftyJSON */; };
@@ -56,6 +59,7 @@
 		692A3A8D2883349F007CE0CB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		692A3A8F2883349F007CE0CB /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		6932AFC7288409FD006165E8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		69482818288D4D3D00D607A1 /* OfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineView.swift; sourceTree = "<group>"; };
 		695DF62B28858B3200F09550 /* userViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
 		69D19F5228880C9E00F2D795 /* otherRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherRequests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C8FFC32888408D00F290C8 /* SwiftyJSON in Frameworks */,
+				69368C9D288D469A008BE809 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,7 @@
 				692A3A6A2883349A007CE0CB /* ContentView.swift */,
 				695DF62B28858B3200F09550 /* userViewModel.swift */,
 				6932AFC7288409FD006165E8 /* LoginView.swift */,
+				69482818288D4D3D00D607A1 /* OfflineView.swift */,
 				696720B92886B76C00A0641A /* JSONDecoding */,
 				692A3A6B2883349F007CE0CB /* Assets.xcassets */,
 			);
@@ -180,6 +186,7 @@
 			name = "Euco API Client IOS (iOS)";
 			packageProductDependencies = (
 				69C8FFC22888408D00F290C8 /* SwiftyJSON */,
+				69368C9C288D469A008BE809 /* Alamofire */,
 			);
 			productName = "Euco API Client IOS (iOS)";
 			productReference = 692A3A702883349F007CE0CB /* EucoAPIClient.app */;
@@ -275,6 +282,7 @@
 			mainGroup = 692A3A6328833499007CE0CB;
 			packageReferences = (
 				69C8FFC12888408D00F290C8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				69368C9B288D4699008BE809 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 692A3A712883349F007CE0CB /* Products */;
 			projectDirPath = "";
@@ -328,6 +336,7 @@
 			files = (
 				692A3A932883349F007CE0CB /* ContentView.swift in Sources */,
 				6932AFC8288409FD006165E8 /* LoginView.swift in Sources */,
+				69482819288D4D3D00D607A1 /* OfflineView.swift in Sources */,
 				692A3A912883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
 				69D19F5328880C9E00F2D795 /* otherRequests.swift in Sources */,
 				695DF62E28858B3200F09550 /* userViewModel.swift in Sources */,
@@ -338,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6948281A288D4D3D00D607A1 /* OfflineView.swift in Sources */,
 				692A3A942883349F007CE0CB /* ContentView.swift in Sources */,
 				6932AFC9288409FD006165E8 /* LoginView.swift in Sources */,
 				692A3A922883349F007CE0CB /* Euco_API_Client_IOSApp.swift in Sources */,
@@ -727,6 +737,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		69368C9B288D4699008BE809 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		69C8FFC12888408D00F290C8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -738,6 +756,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		69368C9C288D469A008BE809 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69368C9B288D4699008BE809 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		69C8FFC22888408D00F290C8 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 69C8FFC12888408D00F290C8 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
