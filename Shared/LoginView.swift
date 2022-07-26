@@ -112,7 +112,7 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
                 let decodedData = Data(base64Encoded: base64Data)!
                 let decodedString = String(data: decodedData, encoding: .utf8)!
                 let EucoAPIAuthdata = try? JSON(data: Data(decodedString.utf8))
-                print(EucoAPIAuthdata!["success"].bool!)
+        
                 if EucoAPIAuthdata!["success"].bool! == true {
                     if let httpResponse = response as? HTTPURLResponse {
                         if httpResponse.statusCode == 200 {
