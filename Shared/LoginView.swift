@@ -86,6 +86,10 @@ func authenticateUser(EucoAPIURL: String, EucoAPIToken: String) {
     wrongURL = 0
     
     guard let url = URL(string: EucoAPIURL) else {
+        info = AlertInfo(
+            id: .EucoAPIOnlineAlert,
+            title: "\(EucoAPIURL) is not a valid URL"
+        )
         wrongURL = 1
         return
         

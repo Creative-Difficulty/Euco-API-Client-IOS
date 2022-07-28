@@ -29,7 +29,7 @@ struct ContentView: View {
     
     // MARK - JSON data vars
     @State private var cpuUsage = ""
-    @State private var DevicesInLANJSON: JSON = []
+    @State private var JSONforDISMView = ""
     @State private var DevicesInLANClicked = false
     
     func GETAndProcessJSON() {
@@ -72,7 +72,7 @@ struct ContentView: View {
                         if httpResponse.statusCode == 200 {
                             lastUpdated = EucoAPIAuthdata!["time"].string!
                             cpuUsage = fixDecimals(NumberTodo: EucoAPIAuthdata!["cpu_usage"].float!)
-                            DevicesInLANJSON = EucoAPIAuthdata!["devices_in_network"]
+                            JSONforDISMView = EucoAPIAuthdata!["devices_in_network"].rawString()!
                         } else {
                             EucoAPIStatus = httpResponse.statusCode
                             info = AlertInfo(
@@ -92,7 +92,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationLink(destination: OfflineView(), isActive: $Offline) { EmptyView() }
-        NavigationLink(destination: DevicesInLAN(JSONDevicesInLAN: $DevicesInLANJSON), isActive: $DevicesInLANClicked) { EmptyView() }
+        NavigationLink(destination: DevicesInLAN(JSONtoParse: $JSONforDISMView), isActive: $DevicesInLANClicked) { EmptyView() }
         List {
             //Text("CPU usage: \(cpuUsage)%")
             Text("Last fetched (Client-Timezone): \(lastFetched)")
